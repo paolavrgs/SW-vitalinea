@@ -2,17 +2,18 @@
 
 .nutritional-container {
   padding: 100px 20px 20px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     padding: 280px 20% 70px;
   }
 
   h2 {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: 2.41px;
     color: $primaryColor;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2.41px;
+    line-height: 27px;
 
     @media screen and (min-width: 768px) {
       font-size: 32px;
@@ -22,46 +23,96 @@
   }
 }
 
-.nutritional-columns {
+.nutritional-element-1 {
+  display: none;
+
   @media screen and (min-width: 768px) {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: -150px;
+  }
+}
+
+.nutritional-element-2 {
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 30%;
+  }
+}
+
+.nutritional-element-3 {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 100px;
+
+  @media screen and (min-width: 768px) {
+    right: 0;
+    top: 30%;
+    width: unset;
+  }
+}
+
+.nutritional-element-4 {
+  top: 37%;
+  left: -25px;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+
+  @media screen and (min-width: 768px) {
+    top: unset;
+    bottom: -120px;
+    left: 0;
+    width: unset;
+  }
+}
+
+.nutritional-columns {
+  @media screen and (min-width: 992px) {
     display: flex;
     gap: 40px;
   }
 }
 
 .nutritional-info {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     width: 40%;
   }
 
   .description {
-    font-weight: 400;
+    color: $black;
     font-size: 14px;
+    font-weight: 400;
     line-height: 19px;
-    color: #000000;
 
-    @media screen and (min-width: 768px) {
-      margin-top: 0;
+    @media screen and (min-width: 992px) {
       margin-bottom: 45px;
+      margin-top: 0;
     }
   }
 
   .ingredients-title {
-    font-weight: 400;
+    color: $black;
     font-size: 14px;
+    font-weight: 400;
     line-height: 19px;
-    color: #000000;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       margin-top: 0;
     }
   }
 
   .ingredients-description {
-    font-weight: 300;
+    color: $black;
     font-size: 14px;
+    font-weight: 300;
     line-height: 19px;
-    color: #000000;
     margin-top: 0;
   }
 
@@ -69,14 +120,14 @@
     background-color: #fafafa;
     color: $primaryColor;
     font-weight: 300;
-    width: 100%;
     margin-top: 55px;
     padding: 13px;
+    width: 100%;
 
-    @media screen and (min-width: 768px) {
-      width: 60%;
-      padding: 13px 80px 0;
+    @media screen and (min-width: 992px) {
       margin-top: 0;
+      padding: 13px 80px 0;
+      width: 60%;
     }
 
     td {
@@ -85,10 +136,10 @@
 
     .item-name {
       font-size: 12px;
-      text-align: right;
       padding-right: 20px;
+      text-align: right;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 992px) {
         font-size: 14px;
       }
     }

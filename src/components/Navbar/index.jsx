@@ -1,11 +1,51 @@
 import { useState } from "react";
-import Logo from "../../assets/logo-color.png";
-import MenuIcon from "../../assets/menu-icon.png";
 import CloseIcon from "../../assets/close-icon.png";
-import "./style.scss";
 import FacebookIcon from "../../assets/facebook.png";
 import InstagramIcon from "../../assets/instagram.png";
+import Logo from "../../assets/logo-color.png";
+import MenuIcon from "../../assets/menu-icon.png";
 import YoutubeIcon from "../../assets/youtube.png";
+import "./style.scss";
+
+const MenuListUI = () => (
+  <>
+    <a
+      className="menu-list-item"
+      target="_blank"
+      href="https://www.vitalinea.com.mx/productos/"
+    >
+      Nuestros productos
+    </a>
+    <a
+      className="menu-list-item"
+      target="_blank"
+      href="https://www.vitalinea.com.mx/disfruta-cuidarte/"
+    >
+      Disfruta cuidarte
+    </a>
+    <a
+      className="menu-list-item"
+      target="_blank"
+      href="https://www.vitalinea.com.mx/blog/"
+    >
+      Blog
+    </a>
+    <div className="social-media">
+      <a href="https://www.facebook.com/VitalineaMX/" target="_blank">
+        <img src={FacebookIcon} />
+      </a>
+      <a href="https://www.instagram.com/vitalineamx/" target="_blank">
+        <img src={InstagramIcon} />
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UCQ9QUtKWouX6TaAXyeOwb_Q"
+        target="_blank"
+      >
+        <img src={YoutubeIcon} />
+      </a>
+    </div>
+  </>
+);
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +53,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <img src={Logo} />
+      <div className="desktop-menu-list">{MenuListUI()}</div>
+
       <img
         className="menu-icon"
         src={MenuIcon}
@@ -24,44 +66,7 @@ const Navbar = () => {
           src={CloseIcon}
           onClick={() => setMenuOpen(false)}
         />
-        <div className="mobile-menu-list">
-          <div>Nuestros productos</div>
-          <div>Disfruta cuidarte</div>
-          <div>Blog</div>
-          <div className="social-media">
-            <a href="https://www.facebook.com/VitalineaMX/" target="_blank">
-              <img src={FacebookIcon} />
-            </a>
-            <a href="https://www.instagram.com/vitalineamx/" target="_blank">
-              <img src={InstagramIcon} />
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCQ9QUtKWouX6TaAXyeOwb_Q"
-              target="_blank"
-            >
-              <img src={YoutubeIcon} />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="desktop-menu-list">
-        <div>Nuestros productos</div>
-        <div>Disfruta cuidarte</div>
-        <div>Blog</div>
-        <div className="social-media">
-          <a href="https://www.facebook.com/VitalineaMX/" target="_blank">
-            <img src={FacebookIcon} />
-          </a>
-          <a href="https://www.instagram.com/vitalineamx/" target="_blank">
-            <img src={InstagramIcon} />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCQ9QUtKWouX6TaAXyeOwb_Q"
-            target="_blank"
-          >
-            <img src={YoutubeIcon} />
-          </a>
-        </div>
+        <div className="mobile-menu-list">{MenuListUI()}</div>
       </div>
     </div>
   );

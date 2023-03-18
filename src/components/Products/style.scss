@@ -4,6 +4,7 @@
   width: 100%;
   background-image: url("../../assets/products-bg.png");
   padding: 40px 0 100px 0;
+  position: relative;
 
   h2 {
     font-weight: 300;
@@ -28,6 +29,12 @@
   gap: 10px;
   grid-template-columns: 40% 40% 40%;
 
+  &::-webkit-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     gap: 100px;
@@ -48,6 +55,7 @@
       font-weight: 300;
       font-size: 11px;
       color: $primaryColor;
+      text-align: center;
 
       @media screen and (min-width: 768px) {
         font-size: 22px;
@@ -56,8 +64,24 @@
   }
 }
 
-.slides::-webkit-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
+.product-element-1 {
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    display: block;
+    left: 17%;
+    position: absolute;
+    top: -70px;
+  }
+}
+
+.product-element-2 {
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -200px;
+  }
 }
