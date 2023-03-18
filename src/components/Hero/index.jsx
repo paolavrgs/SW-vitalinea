@@ -3,6 +3,7 @@ import "./style.scss";
 import ArrowDownIcon from "../../assets/arrow-down-icon.png";
 import FMDBadge from "../../assets/fmd-interior.png";
 import HeroElement from "../../assets/hero-element-1.png";
+import HeroElementMobile from "../../assets/hero-element-mobile.png";
 import NoSugarBadge from "../../assets/no-sugar-ribbon.png";
 import ProductImage from "../../assets/product-image.png";
 import AnimateIn from "../AnimateIn";
@@ -42,6 +43,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <img className="hero-element" src={HeroElement} />
+      <img className="hero-element-mobile" src={HeroElementMobile} />
       <img src={ProductImage} className="hero-image" />
       <div className="hero-content">
         <div className="tabs-container">

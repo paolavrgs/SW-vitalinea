@@ -12,6 +12,7 @@
   justify-content: space-between;
   padding: 20px;
   position: relative;
+  z-index: 2;
 
   @media screen and (min-width: 992px) {
     padding: 20px 7.5%;
@@ -20,6 +21,8 @@
 }
 
 .menu-icon {
+  cursor: pointer;
+
   @media screen and (min-width: 992px) {
     display: none;
   }
@@ -51,6 +54,7 @@
     position: absolute;
     right: 40px;
     top: 20px;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 992px) {

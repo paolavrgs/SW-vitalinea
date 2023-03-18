@@ -41,6 +41,16 @@
     }
   }
 
+  &-element-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
   &-image {
     width: 60%;
     height: 60%;
@@ -181,11 +191,11 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10vh;
+  bottom: -7vh;
   cursor: pointer;
   z-index: 1;
 
   @media screen and (min-width: 768px) {
-    bottom: -7vh;
+    bottom: -10vh;
   }
 }
