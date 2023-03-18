@@ -5,16 +5,16 @@ import "./style.scss";
 
 const Products = () => {
   return (
-    <div class="products">
+    <div className="products">
       <h2>La familia Vitalínea</h2>
-      <div class="product-list">
+      <div className="product-list">
         <div className="product">
           <img src={VitalineaGriego} />
           <span>Vitalínea Griego</span>
         </div>
         <div className="product">
           <img src={VitalineaNatural} />
-          <span>Vitalínea sin Azúcar</span>
+          <span>Vitalínea Sin Azúcar</span>
         </div>
         <div className="product">
           <img src={VitalineaFruit} />

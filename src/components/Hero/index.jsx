@@ -9,7 +9,7 @@ const Hero = () => {
       <img src={ProductImage} className="hero-image" />
       <div className="hero-content">
         <div className="tabs-container">
-          <p>Sabor: &nbsp;</p>
+          <p className="tab-name">Sabor: &nbsp;</p>
           <div className="tabs">
             <div className="tab active">
               <span>Fresa</span>
@@ -22,8 +22,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <h1>Vitalínea® Bebible Fresa 217 gr.</h1>
-        <p>
+        <h1 className="product-title">Vitalínea® Bebible Fresa 217 gr.</h1>
+        <p className="product-description">
           ¡La presentación ideal para llevar contigo! Vitalínea bebible es la
           opción si eres de las personas que siempre están activas y quieren
           probar algo sano, rico y práctico.

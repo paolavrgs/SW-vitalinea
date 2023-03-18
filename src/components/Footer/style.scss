@@ -1,10 +1,44 @@
 .footer {
   padding: 30px 20px;
 
-  &-logos {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-logos {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-left {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    img {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  &-right {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 
   &-copyright {
@@ -13,6 +47,10 @@
     font-size: 12px;
     text-align: center;
     margin: 0;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &-links {
@@ -20,12 +58,22 @@
     gap: 5px;
     margin-top: 14px;
 
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      gap: 20px;
+      margin-bottom: 8px;
+    }
+
     a {
       text-decoration: none;
       color: #000;
       font-weight: 400;
       font-size: 11px;
       position: relative;
+
+      @media screen and (min-width: 768px) {
+        font-size: 12px;
+      }
 
       &::after {
         content: " | ";

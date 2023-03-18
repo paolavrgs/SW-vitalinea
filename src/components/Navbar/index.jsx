@@ -13,7 +13,11 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <img src={Logo} />
-      <img src={MenuIcon} onClick={() => setMenuOpen(true)} />
+      <img
+        className="menu-icon"
+        src={MenuIcon}
+        onClick={() => setMenuOpen(true)}
+      />
       <div className={`mobile-menu ${menuOpen && "open"}`}>
         <img
           className="close-icon"
@@ -44,6 +48,20 @@ const Navbar = () => {
         <div>Nuestros productos</div>
         <div>Disfruta cuidarte</div>
         <div>Blog</div>
+        <div className="social-media">
+          <a href="https://www.facebook.com/VitalineaMX/" target="_blank">
+            <img src={FacebookIcon} />
+          </a>
+          <a href="https://www.instagram.com/vitalineamx/" target="_blank">
+            <img src={InstagramIcon} />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCQ9QUtKWouX6TaAXyeOwb_Q"
+            target="_blank"
+          >
+            <img src={YoutubeIcon} />
+          </a>
+        </div>
       </div>
     </div>
   );

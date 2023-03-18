@@ -49,32 +49,36 @@ const nutritionalValues = [
 
 const NutritionalInfo = () => {
   return (
-    <div className="nutritional-info">
+    <div className="nutritional-container">
       <h2>Información nutrimental</h2>
-      <p>
-        Vitalínea® Bebible Guayaba 217gr Valor promedio por porción de 217gr
-        Porciones por envase: 1
-      </p>
-      <div>
-        <strong>Ingredientes:</strong>
-        <p className="ingredients">
-          Leche descremada pasteurizada y/o reconstituida pasteurizada de vaca.
-          3.5% preparado de fruta guayaba (acesulfame K y sucralosa
-          (27.2mg/100g)), crema, almidón modificado, maltodextrina y cultivos
-          lácticos.
-        </p>
-      </div>
+      <div className="nutritional-columns">
+        <div className="nutritional-info">
+          <p className="description">
+            Vitalínea® Bebible Guayaba 217gr Valor promedio por porción de 217gr
+            Porciones por envase: 1
+          </p>
+          <div>
+            <strong className="ingredients-title">Ingredientes:</strong>
+            <p className="ingredients-description">
+              Leche descremada pasteurizada y/o reconstituida pasteurizada de
+              vaca. 3.5% preparado de fruta guayaba (acesulfame K y sucralosa
+              (27.2mg/100g)), crema, almidón modificado, maltodextrina y
+              cultivos lácticos.
+            </p>
+          </div>
+        </div>
 
-      <table className="nutritional-info-table">
-        {nutritionalValues.map((item) => {
-          return (
-            <tr>
-              <td className="item-name">{item.name}</td>
-              <td className="item-value">{item.value}</td>
-            </tr>
-          );
-        })}
-      </table>
+        <table className="nutritional-info-table">
+          {nutritionalValues.map((item) => {
+            return (
+              <tr>
+                <td className="item-name">{item.name}</td>
+                <td className="item-value">{item.value}</td>
+              </tr>
+            );
+          })}
+        </table>
+      </div>
     </div>
   );
 };
