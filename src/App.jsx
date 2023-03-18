@@ -1,10 +1,19 @@
-function App() {
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import NutritionalInfo from "./components/NutritionalInfo";
+import Products from "./components/Products";
+import Footer from "./components/Footer";
 
+function App() {
   return (
     <div className="App">
-      <h1>Project init</h1>
+      <Navbar />
+      <Hero />
+      <NutritionalInfo />
+      <Products />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

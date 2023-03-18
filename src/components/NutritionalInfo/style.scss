@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+.nutritional-info {
+  padding: 100px 20px 20px;
+
+  h2 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 2.41379px;
+    color: $primaryColor;
+  }
+
+  p,
+  strong {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+
+    &.ingredients {
+      font-weight: 300;
+      margin-top: 0;
+    }
+  }
+}
+
+.nutritional-info-table {
+  background-color: #fafafa;
+  color: $primaryColor;
+  font-weight: 300;
+  width: 100%;
+  margin-top: 55px;
+  padding: 13px;
+
+  td {
+    padding-bottom: 20px;
+  }
+
+  .item-name {
+    font-size: 12px;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  .item-value {
+    font-size: 14px;
+  }
+}
